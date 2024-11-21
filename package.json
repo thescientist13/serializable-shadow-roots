@@ -1,0 +1,14 @@
+{
+  "name": "serializable-shadow-roots",
+  "version": "1.0.0",
+  "description": "A demonstration repo for serializable shadow roots",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thescientist13/serializable-shadow-roots.git"
+  },
+  "author": "Owen Buckley <owen@thegreenhouse.io>",
+  "license": "ISC",
+  "scripts": {
+    "start": "npx live-server ."
+  }
+}

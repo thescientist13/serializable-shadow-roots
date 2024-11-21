@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="module" src="./card.js"></script>
+    <script type="module" src="./card-template.js"></script>
+    <script async>
+      document.addEventListener('DOMContentLoaded', () => {
+        const card = document.getElementsByTagName('app-card')[0];
+
+        const innerHtml = card.shadowRoot.innerHTML;
+        const html = card.shadowRoot.getHTML();
+        const serializedHtml = card.shadowRoot.getHTML({ serializableShadowRoots: true });
+
+        console.log('Card =>', { innerHtml, html, serializedHtml });
+
+        console.log('----------------------------');
+
+        const cardWithTemplate = document.getElementsByTagName('app-card-template')[0];
+
+        const innerHtmlTemplate = cardWithTemplate.shadowRoot.innerHTML;
+        const htmlTemplate = cardWithTemplate.shadowRoot.getHTML();
+        const htmlSerializedTemplate = cardWithTemplate.shadowRoot.getHTML({ serializableShadowRoots: true });
+
+        console.log('Card w/ template =>', { innerHtmlTemplate, htmlTemplate, htmlSerializedTemplate });
+      })
+    </script>
+  </head>
+  <body>
+    <h1>Serializable Shadow Roots</h1>
+    <app-card></app-card>
+    <app-card-template></app-card-template>
+  </body>
+</html>
